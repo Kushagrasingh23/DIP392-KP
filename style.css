@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-gap: 10px;
+    margin: 20px;
+    width: max-content;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cell:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cell.player1 {
+    background-color: red;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+
+.cell.player2 {
+    background-color: yellow;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(255, 255, 0, 0.3);
+}
+
+#status {
+    margin-left: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal-content button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#modal-content button:hover {
+    background-color: #004999;
+}
