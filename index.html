@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>Connect Four</h1>
+    <div class="settings">
+        <button id="two-player-button">Two Player Mode</button>
+        <button id="single-player-button">Single Player Mode</button>
+        <label for="player1-color">Player 1 Color:</label>
+        <input type="color" id="player1-color" name="player1-color" value="#FF0000">
+        <label for="player2-color">Player 2/AI Color:</label>
+        <input type="color" id="player2-color" name="player2-color" value="#FFFF00">
+    </div>
     <div class="game-container">
         <div id="game-board"></div>
         <p id="status"></p>
@@ -17,6 +25,12 @@
             <p></p>
             <button id="restart-button">Restart Game</button>
         </div>
+    </div>
+    <button id="instructions-button">Instructions</button>
+    <div id="instructions" class="instructions">
+        <h2>Instructions</h2>
+        <p>Connect Four is a two-player game where players take turns dropping discs into a 7-column by 6-row grid. The goal is to be the first to form a horizontal, vertical, or diagonal line of four discs.</p>
+        <button id="close-instructions">Close</button>
     </div>
     <script src="script.js"></script>
 </body>
